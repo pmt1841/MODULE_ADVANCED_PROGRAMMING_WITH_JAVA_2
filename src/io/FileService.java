@@ -14,7 +14,7 @@ public class FileService implements FileInterface {
             for(HashMap.Entry<Integer, Phone> entry : phoneList.entrySet()) {
                 bw.write(entry.getValue().toCSV());
             }
-
+            System.out.println("Ghi file thành công");
         } catch (IOException e) {
             System.out.println("Lỗi ghi file");
         }
