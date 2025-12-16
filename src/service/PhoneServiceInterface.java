@@ -13,5 +13,5 @@ public interface PhoneServiceInterface {
 
     Phone searchPhone(int id);
 
-    void removePhone(int id);
+    void removePhone(Phone phone);
 }
