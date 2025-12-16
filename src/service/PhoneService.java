@@ -29,7 +29,7 @@ public class PhoneService implements PhoneServiceInterface {
     }
 
     @Override
-    public HashMap<Integer, Phone> searchPhoneByName(String name) {
+    public HashMap<Integer, Phone> searchPhone(String name) {
         HashMap<Integer, Phone> phoneList = listPhone();
         return (HashMap<Integer, Phone>) phoneList.entrySet().stream().filter(entry -> entry.getValue().getName().toLowerCase().contains(name.toLowerCase())).collect(Collectors.toMap(
                 Map.Entry::getKey,
@@ -38,7 +38,7 @@ public class PhoneService implements PhoneServiceInterface {
     }
 
     @Override
-    public Phone searchPhoneByID(int id) {
+    public Phone searchPhone(int id) {
         HashMap<Integer, Phone> phoneList = listPhone();
         return phoneList.get(id);
     }
@@ -48,5 +48,4 @@ public class PhoneService implements PhoneServiceInterface {
         HashMap<Integer, Phone> phoneList = listPhone();
         phoneList.remove(id);
     }
-
 }
